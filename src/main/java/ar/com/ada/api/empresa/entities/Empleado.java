@@ -101,6 +101,9 @@ public class Empleado {
         this.fechaDeBaja = fechaDeBaja;
     }
 
+    public Empleado() {
+    }
+
     
     
 }
