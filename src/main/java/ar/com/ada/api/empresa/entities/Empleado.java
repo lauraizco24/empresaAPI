@@ -22,9 +22,7 @@ public class Empleado {
     private int id;
     private String nombre;
     private int edad;
-    @ManyToOne
-    @JoinColumn(name = "categoria_id", referencedColumnName = "categoria_id")
-    private Categoria categoria;
+    
     private BigDecimal sueldo;
     private int estado;
     @Column(name = "fecha_alta")
@@ -32,7 +30,9 @@ public class Empleado {
     @Column(name = "fecha_baja")
     private Date fechaDeBaja;
 
-
+    @ManyToOne
+    @JoinColumn(name = "categoria_id", referencedColumnName = "categoria_id")
+    private Categoria categoria;
 
 
     //Getters y Setters
@@ -67,6 +67,7 @@ public class Empleado {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
+        this.categoria.getEmpleados().add(this);
     }
 
     public BigDecimal getSueldo() {
