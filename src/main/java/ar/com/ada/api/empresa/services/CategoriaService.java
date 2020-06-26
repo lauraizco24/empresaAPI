@@ -1,10 +1,13 @@
 package ar.com.ada.api.empresa.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import ar.com.ada.api.empresa.entities.Categoria;
 import ar.com.ada.api.empresa.repos.CategoriaRepository;
-
+@Service
 public class CategoriaService {
 
     @Autowired
@@ -52,7 +55,7 @@ public class CategoriaService {
     // Este metodo llama al metodo definido en el repositorio para uscar una
     // categoria en la base de datos a traves de su ID.
     public Categoria buscarPorId(int categoriaId) {
-        return categoriaRepo.findByCategoriaId(categoriaId);
+        return categoriaRepo.findById(categoriaId);
 
     }
 
@@ -72,6 +75,10 @@ public class CategoriaService {
         grabarCategoria(categoriaOriginal);
 
         return true;
+    }
+
+    public List<Categoria> obtenerCategoria(){
+        return categoriaRepo.findAll();
     }
 
 }

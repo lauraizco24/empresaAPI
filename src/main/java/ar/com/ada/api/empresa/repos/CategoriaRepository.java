@@ -9,7 +9,7 @@ import ar.com.ada.api.empresa.entities.Categoria;
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
     
-    Categoria findByCategoriaId(int categoriaId);
+    Categoria findById(int categoriaId);
 
     Categoria findByNombre(String nombreCategoria);
 }

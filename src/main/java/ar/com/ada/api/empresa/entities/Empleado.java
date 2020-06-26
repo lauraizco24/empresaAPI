@@ -22,7 +22,7 @@ public class Empleado {
     private int id;
     private String nombre;
     private int edad;
-    
+
     private BigDecimal sueldo;
     private int estado;
     @Column(name = "fecha_alta")
@@ -34,8 +34,7 @@ public class Empleado {
     @JoinColumn(name = "categoria_id", referencedColumnName = "categoria_id")
     private Categoria categoria;
 
-
-    //Getters y Setters
+    // Getters y Setters
 
     public int getId() {
         return id;
@@ -105,6 +104,4 @@ public class Empleado {
     public Empleado() {
     }
 
-    
-    
 }

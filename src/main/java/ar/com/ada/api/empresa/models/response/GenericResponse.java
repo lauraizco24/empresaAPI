@@ -1,4 +1,4 @@
-package ar.com.ada.api.empresa.models;
+package ar.com.ada.api.empresa.models.response;
 
 public class GenericResponse {
     public boolean isOk = false;
