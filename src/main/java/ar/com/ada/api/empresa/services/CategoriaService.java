@@ -80,5 +80,8 @@ public class CategoriaService {
     public List<Categoria> obtenerCategoria(){
         return categoriaRepo.findAll();
     }
+    public Categoria obtenerCategoriaporId(int categoriaId){
+        return categoriaRepo.findById(categoriaId);
+    }
 
 }
